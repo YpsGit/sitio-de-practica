@@ -27,5 +27,41 @@
   <button onclick="gtag('event', 'click_contacto_desde_index'); location.href='contacto.html';">Contactanos</button>
   <button onclick="gtag('event', 'click_servicios_desde_index'); location.href='servicios.html';">Ver servicios</button>
   <button onclick="gtag('event', 'click_sobre_desde_index'); location.href='sobre-nosotros.html';">Sobre nosotros</button>
+
+ <h1>Bienvenido a mi página de práctica</h1>
+
+  <!-- Botón de contacto -->
+  <button onclick="gtag('event', 'click_ayuda', {
+    'label': 'boton_ayuda_header'
+  });">¿Necesitas ayuda?</button>
+
+  <!-- Video de YouTube -->
+  <h2>Mira este video</h2>
+  <iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/VIDEO_ID" 
+    title="Video de prueba"
+    frameborder="0" 
+    allow="autoplay; encrypted-media" 
+    allowfullscreen></iframe>
+
+  <!-- Formulario de prueba -->
+  <h2>Contáctanos</h2>
+  <form onsubmit="gtag('event', 'formulario_enviado', {
+    'label': 'form_contacto'
+  }); return false;">
+    <input type="text" placeholder="Tu nombre" required>
+    <input type="email" placeholder="Tu correo" required>
+    <button type="submit">Enviar</button>
+  </form>
+
+  <!-- Botón de WhatsApp -->
+  <h2>¿Prefieres WhatsApp?</h2>
+  <a href="https://wa.me/1234567890" 
+     onclick="gtag('event', 'whatsapp_click', {
+       'label': 'whatsapp_footer'
+     });" 
+     target="_blank">Escríbenos por WhatsApp</a>
+
+  
 </body>
 </html>
