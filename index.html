@@ -15,53 +15,46 @@
 <body>
   <h1>Bienvenido a mi sitio de práctica</h1>
 
-  <nav>
-    <a href="index.html">Inicio</a> |
-    <a href="contacto.html">Contacto</a> |
-    <a href="servicios.html">Servicios</a> |
-    <a href="sobre-nosotros.html">Sobre nosotros</a>
-  </nav>
+  <!-- Botones principales -->
+  <button onclick="gtag('event', 'click_contactanos', {
+    'label': 'boton_contactanos'
+  });">Contáctanos</button>
 
-  <p>Prueba los botones con eventos GA4:</p>
+  <button onclick="gtag('event', 'click_servicios', {
+    'label': 'boton_servicios'
+  });">Ver servicios</button>
 
-  <button onclick="gtag('event', 'click_contacto_desde_index'); location.href='contacto.html';">Contactanos</button>
-  <button onclick="gtag('event', 'click_servicios_desde_index'); location.href='servicios.html';">Ver servicios</button>
-  <button onclick="gtag('event', 'click_sobre_desde_index'); location.href='sobre-nosotros.html';">Sobre nosotros</button>
+  <button onclick="gtag('event', 'click_sobre_nosotros', {
+    'label': 'boton_sobre_nosotros'
+  });">Sobre nosotros</button>
 
- <h1>Bienvenido a mi página de práctica</h1>
-
-  <!-- Botón de contacto -->
-  <button onclick="gtag('event', 'click_ayuda', {
-    'label': 'boton_ayuda_header'
-  });">¿Necesitas ayuda?</button>
-
-  <!-- Video de YouTube -->
-  <h2>Mira este video</h2>
-  <iframe width="560" height="315" 
-    src="https://www.youtube.com/watch?v=8DhCBAy2Sb4" 
-    title="Video de prueba"
-    frameborder="0" 
-    allow="autoplay; encrypted-media" 
-    allowfullscreen></iframe>
-
-  <!-- Formulario de prueba -->
-  <h2>Contáctanos</h2>
-  <form onsubmit="gtag('event', 'formulario_enviado', {
-    'label': 'form_contacto'
-  }); return false;">
-    <input type="text" placeholder="Tu nombre" required>
-    <input type="email" placeholder="Tu correo" required>
-    <button type="submit">Enviar</button>
-  </form>
+  <br><br>
 
   <!-- Botón de WhatsApp -->
-  <h2>¿Prefieres WhatsApp?</h2>
   <a href="https://wa.me/1234567890" 
      onclick="gtag('event', 'whatsapp_click', {
        'label': 'whatsapp_footer'
      });" 
      target="_blank">Escríbenos por WhatsApp</a>
 
-  
+  <br><br>
+
+  <!-- Video de YouTube -->
+  <h2>Video de introducción</h2>
+  <iframe width="560" height="315" 
+    src="https://www.youtube.com/watch?v=8DhCBAy2Sb4" 
+    title="Video de práctica"
+    frameborder="0" 
+    allow="autoplay; encrypted-media" 
+    allowfullscreen></iframe>
+
+  <br><br>
+
+  <!-- Botón para abrir Google Form -->
+  <h2>Formulario de contacto</h2>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSfcVYyCd9PQ4D15yACTfEwzcr-F2HF0GOf_QpjD_b6Y0AAVLg/viewform?usp=dialog" 
+     onclick="gtag('event', 'click_formulario_google', {
+       'label': 'formulario_contacto_externo'
+     });"
+     target="_blank">Ir al formulario</a>
 </body>
-</html>
