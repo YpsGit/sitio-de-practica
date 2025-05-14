@@ -2,9 +2,8 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Mi sitio de práctica</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Reemplaza 'G-XXXXXXXXXX' con tu código de Google Analytics -->
+  <title>Inicio</title>
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -15,7 +14,18 @@
 </head>
 <body>
   <h1>Bienvenido a mi sitio de práctica</h1>
-  <p>Haz clic en el botón para generar un evento.</p>
-  <button onclick="gtag('event', 'clic_boton_prueba');">Haz clic aquí</button>
+
+  <nav>
+    <a href="index.html">Inicio</a> |
+    <a href="contacto.html">Contacto</a> |
+    <a href="servicios.html">Servicios</a> |
+    <a href="sobre-nosotros.html">Sobre nosotros</a>
+  </nav>
+
+  <p>Prueba los botones con eventos GA4:</p>
+
+  <button onclick="gtag('event', 'click_contacto_desde_index'); location.href='contacto.html';">Contactanos</button>
+  <button onclick="gtag('event', 'click_servicios_desde_index'); location.href='servicios.html';">Ver servicios</button>
+  <button onclick="gtag('event', 'click_sobre_desde_index'); location.href='sobre-nosotros.html';">Sobre nosotros</button>
 </body>
 </html>
