@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mi sitio de práctica</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Reemplaza 'G-XXXXXXXXXX' con tu código de Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+</head>
+<body>
+  <h1>Bienvenido a mi sitio de práctica</h1>
+  <p>Haz clic en el botón para generar un evento.</p>
+  <button onclick="gtag('event', 'clic_boton_prueba');">Haz clic aquí</button>
+</body>
+</html>
